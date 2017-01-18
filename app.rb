@@ -18,8 +18,15 @@ get "/contacts" do
   @contacts = Contact.all
   
   @contact_21 = Contact.where(id: 21)
-  logger.info('ああああああああああ')
-  logger.info(@contact_21.inspect)
+  
+  logger.info('修正前')
+  logger.info(@contact_21.firstname)
+  
+  @contact_21.firstname = 'ほげさん'
+  @contact_21.save!
+
+  logger.info('修正後')
+  logger.info(@contact_21.firstname)
   
   erb :index
 end
