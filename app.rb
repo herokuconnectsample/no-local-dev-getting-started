@@ -22,7 +22,7 @@ get "/contacts" do
   logger.info('修正前')
   logger.info(@contact_21.lastname)
   
-  @contact_21.lastname="ほげさん333"
+  @contact_21.lastname="55555555"
   @contact_21.save!
 
   logger.info('修正後')
