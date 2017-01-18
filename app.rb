@@ -18,6 +18,8 @@ get "/contacts" do
   @contacts = Contact.all
   
   @contact_21 = Contact.where(id: 21)
+  puts 'ああああああああああ'
+  puts @contact_21.inspect
   
   erb :index
 end
