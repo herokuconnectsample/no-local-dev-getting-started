@@ -16,6 +16,9 @@ end
 
 get "/contacts" do
   @contacts = Contact.all
+  
+  @contact_21 = Contact.where(id: 21)
+  
   erb :index
 end
 
