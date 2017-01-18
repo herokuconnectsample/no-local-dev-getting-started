@@ -15,6 +15,8 @@ class Contact < ActiveRecord::Base
 end
 
 get "/contacts" do
+  logger.info('いいいいいい')
+  
   @contacts = Contact.all
   
   @contact_21 = Contact.where(id: 21)
