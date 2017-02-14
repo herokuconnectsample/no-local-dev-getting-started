@@ -17,13 +17,13 @@ end
 get "/contacts" do
   @contacts = Contact.all
   
-  @contact_21 = Contact.find_by(id: 21)
-  logger.info('修正前')
-  logger.info(@contact_21.name)
-  @contact_21.name="99999999"
-  @contact_21.save!
-  logger.info('修正後')
-  logger.info(@contact_21.name)
+#  @contact_21 = Contact.find_by(id: 21)
+#  logger.info('修正前')
+#  logger.info(@contact_21.name)
+#  @contact_21.name="99999999"
+#  @contact_21.save!
+#  logger.info('修正後')
+#  logger.info(@contact_21.name)
   
   erb :index
 end
